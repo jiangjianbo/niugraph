@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>460</x>
+      <y>280</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Edge
+--
++id:EdgeId
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>60</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Graph
+--
++edges:Edge[]
++vertex:Vertex[]
++edgeFactory:EdgeFactory
++vertexFactory:VertexFactory
+--
++createEdge(source, target:Vertex):Edge
++createEdge(source, target:Vertex):Edge
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>460</x>
+      <y>0</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Vertex&lt;DataT&gt;
+--
++id:VertexId
++data:DataT
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>0</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=vertex
+&lt;&lt;indexed&gt;&gt;</panel_attributes>
+    <additional_attributes>280;30;30;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>120</y>
+      <w>300</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=edges
+&lt;&lt;indexed&gt;&gt;</panel_attributes>
+    <additional_attributes>280;170;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>70</y>
+      <w>130</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=outgoingEdges
+m2=1..1
+r2=source
+&lt;&lt;indexed&gt;&gt;</panel_attributes>
+    <additional_attributes>70;210;70;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>570</x>
+      <y>70</y>
+      <w>130</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+r1=incomingEdges
+m2=1..1
+r2=target
+&lt;&lt;indexed&gt;&gt;</panel_attributes>
+    <additional_attributes>70;210;70;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>730</x>
+      <y>460</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IndexedCollection&lt;Key,Value&gt;
+--
++getValue(key:Key)
++add(key:Key, value:Value)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>460</x>
+      <y>450</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>EdgeCoW
+--
++id:EdgeId
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>0</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>VertexCoW&lt;DataT&gt;
+--
++id:VertexId
++data:DataT
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>90</x>
+      <y>320</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>GraphCoW
+--
++edges:Edge[]
++vertex:Vertex[]
++edgeFactory:EdgeFactory
++vertexFactory:VertexFactory
+--
++createEdge(source, target:Vertex):Edge
++createEdge(source, target:Vertex):Edge
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>90</x>
+      <y>170</y>
+      <w>120</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;100;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>530</x>
+      <y>330</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>640</x>
+      <y>20</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;100;30</additional_attributes>
+  </element>
+</diagram>
